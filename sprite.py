@@ -18,6 +18,8 @@ class Sprite:
         surface.blit(self.rotated_image, (x, y))
         
     def rotate(self, angle):
+        angle -= 180
+
         self.rotated_image = pygame.transform.rotate(self.original_image, angle)
 
         rotated_rect = self.original_rect.copy()
