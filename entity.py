@@ -11,7 +11,7 @@ class TurnDirection(Enum):
 class Entity:
 
     def __init__(self, x, y, sprite_animation):
-        self.speed = 5
+        self.speed = 0
 
         self.x = x
         self.y = y
@@ -26,10 +26,10 @@ class Entity:
     
     def update(self):
         if self.turn_direction == TurnDirection.LEFT:
-            self.rotation -= 5
+            self.rotation += 5
 
         elif self.turn_direction == TurnDirection.RIGHT:
-            self.rotation += 5
+            self.rotation -= 5
 
         self.update_rotation()
 

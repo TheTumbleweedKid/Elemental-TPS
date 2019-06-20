@@ -4,7 +4,7 @@ from sprite import Sprite
 
 class Animator:
     
-    def __init__(self, name, width=20, height=20):
+    def __init__(self, name, width=40, height=40):
 
         self.frames = []
         self.index = 0
