@@ -17,7 +17,15 @@ player1_controls = {
     'right': pygame.K_RIGHT
 }
 
+player2_controls = {
+    'forward': pygame.K_w,
+    'back': pygame.K_s,
+    'left': pygame.K_a,
+    'right': pygame.K_d
+}
+
 player1 = Player(player1_controls, 80, 80, "Green")
+player2 = Player(player2_controls, surface_width - 240, surface_height - 240, "Red")
 
 done = False
 
@@ -35,20 +43,24 @@ while not done: # main game loop
                 done = True
 
             player1.on_key_press(event.key)
+            player2.on_key_press(event.key)
 
         # key releases
         elif event.type == pygame.KEYUP:
             player1.on_key_release(event.key)
+            player2.on_key_release(event.key)
     
     # update
     player1.update()    
-    
+    player2.update()
+
     # render
     display_surface.fill(surface_background)
     player1.draw(display_surface)
+    player2.draw(display_surface)
     pygame.display.flip()
 
-    clock.tick(60)
+    clock.tick(120)
     
 
 pygame.quit()

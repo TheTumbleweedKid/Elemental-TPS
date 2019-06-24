@@ -10,8 +10,8 @@ class TurnDirection(Enum):
 
 class Entity:
 
-    def __init__(self, x, y, sprite_animation):
-        self.speed = 0
+    def __init__(self, x, y, sprite, speed=0):
+        self.speed = speed
 
         self.x = x
         self.y = y
@@ -19,17 +19,17 @@ class Entity:
         self.is_moving = True
         self.turn_direction = TurnDirection.NO_TURN
 
-        self.sprite_animation = sprite_animation
+        self.sprite = sprite
         
         self.rotation = 0
         self.update_rotation()
     
     def update(self):
         if self.turn_direction == TurnDirection.LEFT:
-            self.rotation += 5
+            self.rotation += 3
 
         elif self.turn_direction == TurnDirection.RIGHT:
-            self.rotation -= 5
+            self.rotation -= 3
 
         self.update_rotation()
 
@@ -38,7 +38,7 @@ class Entity:
             self.y += self.dy
 
     def draw(self, surface):
-        self.sprite_animation.draw(surface, self.x, self.y)
+        self.sprite.draw(surface, self.x, self.y)
 
     def update_rotation(self):
         # check if rotation is less than 0 or greater than 360
@@ -49,7 +49,7 @@ class Entity:
             self.rotation -= 360
         
         # rotate the animations
-        self.sprite_animation.rotate(self.rotation)
+        self.sprite.rotate(self.rotation)
 
         radians = self.rotation * (math.pi / 180)
 
