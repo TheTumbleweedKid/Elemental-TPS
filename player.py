@@ -12,7 +12,7 @@ class Player(Entity):
 
     def on_key_press(self, key):
         if self.controls['forward'] == key:
-            self.speed = 2.5
+            self.speed += 2.5
         
         elif self.controls['back'] == key:
             self.speed -= 1.5
