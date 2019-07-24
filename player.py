@@ -5,7 +5,7 @@ from os import path
 
 class Player(Entity):
 
-    def __init__(self, controls, x, y, player_colour):
+    def __init__(self, controls, x, y, player_colour, health):
         sprite_path = path.join('Players', player_colour + '.png')
         super().__init__(x, y, Sprite(sprite_path, 50, 50))
         self.controls = controls

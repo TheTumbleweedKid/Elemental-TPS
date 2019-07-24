@@ -33,8 +33,17 @@ class Weapon:
         self.sprite.rotate(angle)
 
 
+r_burst_size = randint(1, randint(1, randint(1, 2)))
+
+if r_burst_size > 1: 
+    r_burst_delay = uniform(0.05, 0.25) 
+
+else:
+    r_burst_delay = 0
+
 weapons = {
     'Sub-MachineGun': {
+        'name': 'Sub-machine Gun',
         'weapon_sprite': 'Sub-MachineGun.png',
         'bullet_sprite': 'Bullet.png',
         'damage': 3.25,
@@ -50,6 +59,7 @@ weapons = {
     },
 
     'MachineGun': {
+        'name': 'Machine Gun',
         'weapon_sprite': 'MachineGun.png',
         'bullet_sprite': 'Bullet.png',
         'damage': 5.25,
@@ -65,6 +75,7 @@ weapons = {
     },
 
     'HeavyMachineGun': {
+        'name': 'Heavy Machine Gun',
         'weapon_sprite': 'HeavyMachineGun.png',
         'bullet_sprite': 'Bullet.png',
         'damage': 8,
@@ -80,6 +91,7 @@ weapons = {
     },
 
     'Sniper': {
+        'name': 'Sniper',
         'weapon_sprite': 'Sniper.png',
         'bullet_sprite': 'Bullet.png',
         'damage': 35,
@@ -95,6 +107,7 @@ weapons = {
     },
 
     'HeavySniper': {
+        'name': 'Heavy Sniper',
         'weapon_sprite': 'HeavySniper.png',
         'bullet_sprite': 'Bullet.png',
         'damage': 65,
@@ -110,17 +123,14 @@ weapons = {
     },
 
     'Random': {
+        'name': 'Random',
         'weapon_sprite': 'Random.png',
         'bullet_sprite': 'Bullet.png',
         'damage': uniform(0.1, randint(55, 95)),
         'cool_down': uniform(0.01, 1.5),
         'spread': uniform(0, 3.0),
-        'burst_size': randint(1, randint(1, randint(1, 2))),
-        'burst_delay': 
-            if burst_size > 1: 
-                burst_delay = uniform(0.05, 0.25) 
-            else:
-                burst_delay = 0,
+        'burst_size': r_burst_size,
+        'burst_delay': r_burst_delay,
         'max_ammo': randint(13, 45),
         'reload_time': uniform(1.2, 4.75),
         'bullet_speed': uniform(15, 30),
