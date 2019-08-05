@@ -12,7 +12,7 @@ pygame.display.set_caption('Tank 2.0')
 
 surface_width = display_surface.get_width()
 surface_height = display_surface.get_height()
-surface_background = [240, 155, 96]
+surface_background = [185, 185, 185]
 
 done = False
 clock = pygame.time.Clock()
@@ -20,7 +20,7 @@ clock = pygame.time.Clock()
 game_state = GameState.SETUP
 
 game_setup = GameSetup(None, display_surface)
-game_play = GamePlay(None, surface_width, surface_height, None, None)
+game_play = GamePlay(None, surface_width, surface_height, None, None, display_surface)
 
 window = game_setup
 

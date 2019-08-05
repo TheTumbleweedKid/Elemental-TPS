@@ -45,7 +45,7 @@ weapons = {
     'Sub-MachineGun': {
         'name': 'Sub-machine Gun',
         'weapon_sprite': 'Sub-MachineGun.png',
-        'bullet_sprite': 'Bullet.png',
+        'bullet_sprite': 'StandardBulletII.png',
         'damage': 3.25,
         'cool_down': 0.065,
         'spread': 0.65,
@@ -61,7 +61,7 @@ weapons = {
     'MachineGun': {
         'name': 'Machine Gun',
         'weapon_sprite': 'MachineGun.png',
-        'bullet_sprite': 'Bullet.png',
+        'bullet_sprite': 'StandardBulletII.png',
         'damage': 5.25,
         'cool_down': 0.1125,
         'spread': 0.19,
@@ -77,7 +77,7 @@ weapons = {
     'HeavyMachineGun': {
         'name': 'Heavy Machine Gun',
         'weapon_sprite': 'HeavyMachineGun.png',
-        'bullet_sprite': 'Bullet.png',
+        'bullet_sprite': 'StandardBulletII.png',
         'damage': 8,
         'cool_down': 0.2,
         'spread': 0.1,
@@ -93,7 +93,7 @@ weapons = {
     'Sniper': {
         'name': 'Sniper',
         'weapon_sprite': 'Sniper.png',
-        'bullet_sprite': 'Bullet.png',
+        'bullet_sprite': 'StandardBulletII.png',
         'damage': 35,
         'cool_down': 0.65,
         'spread': 0.075,
@@ -109,7 +109,7 @@ weapons = {
     'HeavySniper': {
         'name': 'Heavy Sniper',
         'weapon_sprite': 'HeavySniper.png',
-        'bullet_sprite': 'Bullet.png',
+        'bullet_sprite': 'StandardBulletII.png',
         'damage': 65,
         'cool_down': 1.25,
         'spread': 0,
@@ -125,7 +125,7 @@ weapons = {
     'Random': {
         'name': 'Random',
         'weapon_sprite': 'Random.png',
-        'bullet_sprite': 'Bullet.png',
+        'bullet_sprite': 'StandardBulletII.png',
         'damage': uniform(0.1, randint(55, 95)),
         'cool_down': uniform(0.01, 1.5),
         'spread': uniform(0, 3.0),

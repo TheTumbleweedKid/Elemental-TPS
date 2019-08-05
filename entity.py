@@ -37,17 +37,13 @@ class Entity:
             self.x += self.dx
             self.y += self.dy
 
+        
+
     def draw(self, surface):
         self.sprite.draw(surface, self.x, self.y)
 
     def update_rotation(self):
-        # check if rotation is less than 0 or greater than 360
-        if self.rotation < 0:
-            self.rotation += 360
-            
-        elif self.rotation > 360:
-            self.rotation -= 360
-        
+
         # rotate the animations
         self.sprite.rotate(self.rotation)
 
